@@ -1,0 +1,154 @@
+* {
+    font-family: "Roboto", sans-serif;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-image: url(images/imgbackground.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* LOGO */
+#imgLogo {
+    width: 45%;
+    max-width: 150px;
+    min-width: 90px;
+    margin: 0 auto;
+    display: block;
+    margin-top: -95px;
+}
+
+/* FORMULÁRIO */
+.form-container {
+    background: #ffffff;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    width: 100%;
+    max-width: 360px;
+    padding: 30px;
+    box-shadow: 0 4px 25px #ffffffbb;
+}
+
+label {
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: #000000ab;
+}
+::placeholder{
+    font-style: italic;
+    color: #00000052;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    margin-bottom: 22px;
+    margin-top: 10px;
+    outline: none;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #000000;
+    font-size: 16px;
+    transition: .2s;
+}
+
+input:focus {
+    border-color: #007bff;
+}
+
+/* BOTÃO */
+button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #007bff;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+button:hover {
+    background: #005fcc;
+}
+
+/* SPINNER */
+.spinner {
+    width: 30px;
+    height: 30px;
+    border: 4px solid #ccc;
+    border-top: 4px solid #3498db;
+    border-radius: 50%;
+    animation: spin 0.9s linear infinite;
+    margin: 10px auto;
+    display: none;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 15px 0;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+}
+
+/* RESPONSIVIDADE — TELAS MENORES */
+@media (max-width: 480px) {
+
+    .form-container {
+        /* Reduzindo o padding para liberar espaço vertical */
+        padding: 15px;
+        max-width: 85%;
+    }
+
+    #imgLogo {
+        /* Reduzindo o logo e a margem negativa */
+        width: 30%; /* Levemente menor */
+        margin-top: -30px; /* Menos margem negativa */
+    }
+
+    h2 {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    label {
+        font-size: 12px;
+    }
+
+    input {
+        /* Reduzindo o espaçamento dos inputs */
+        font-size: 14px;
+        padding: 7px; /* Menos altura */
+        margin-bottom: 15px; /* Menos espaço entre campos */
+    }
+
+    button {
+        font-size: 14px;
+        padding: 9px;
+    }
+
+    .spinner {
+        width: 24px;
+        height: 24px;
+        border-width: 3px;
+    }
+}
